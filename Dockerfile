@@ -7,7 +7,7 @@ ENV USER_UID=1000
 ENV USER_GID=${USER_UID}
 
 # Install needed packages
-RUN pacman -Syu --noconfirm && pacman -Sy --noconfirm sudo git curl neofetch
+RUN pacman -Syu --noconfirm && pacman -Sy --noconfirm sudo git curl neofetch git-lfs
 
 # Setup the user
 RUN groupadd -g ${USER_GID} ${USERNAME} && \
